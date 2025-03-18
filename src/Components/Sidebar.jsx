@@ -75,7 +75,7 @@ export default function Sidebar() {
           {/* Profile */}
           <div className="p-6 text-center">
             <div className="w-24 h-24 mx-auto rounded-full bg-white mb-4 overflow-hidden">
-              <img src="https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-6/418995736_1565407114245821_1980001325974567799_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEnNf_b48E87Ol1bs72AakB48a5l601e1TjxrmXrTV7VJXi483Ks6rdr0Gpr2il8JjGbBfNgk2JUoL_2CMuM03G&_nc_ohc=T6bojpWPSvQQ7kNvgENEK_i&_nc_oc=AdhxCpM8Qix_xrBe1NofDvT_YFyD47yOIm3WW4o6VWgMu-nWJJuapyskcypc2VnnQK8&_nc_zt=23&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=EnJEJnAQ46dSLr-6dYwrQA&oh=00_AYF-Tz-HIgN4deKW1FwIl0Sk3si3UO5J8T7PHy9IabsQNg&oe=67DF39B7" alt="EBAD ULLAH" className="w-[150px] h-[150px] object-cover" />
+              <img src="https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-6/456039248_1703929367060261_2775393133703123537_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFgolxL-fiD7W89cnGGYWLUo6vVrDZIaK6jq9WsNkhorj2Ja3s6MlMrSK8s3HqvwX9yCiqF_28Meq4rz096OoSy&_nc_ohc=68D71CEmq9wQ7kNvgFkA5DJ&_nc_oc=AdiCAFISOKfoATl5c1kK3C4IlfWtAHFipssqENUMfmjhkgfjfsQdjm7d0dc1dTHbs80&_nc_zt=23&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=itlj1uj0fEJxbARKNo5pFw&oh=00_AYFI2IfR5lo-8hZnmLPTU7xS9OwqPdvgj1Lzd4aoYgsgSQ&oe=67DF36E4" alt="EBAD ULLAH" className="w-[150px] h-[150px] object-cover" />
             </div>
             <h1 className="text-xl font-bold">EBAD ULLAH</h1>
             <p className="text-sm text-blue-100">Frontend Developer</p>
