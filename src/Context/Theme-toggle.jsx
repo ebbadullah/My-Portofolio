@@ -1,60 +1,55 @@
 "use client"
 
-import { useTheme } from "./Theme-Provider"
+import { useEffect, useState } from "react"
+import { SunIcon, MoonIcon } from "../Components/Icons"
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme()
+  const [theme, setTheme] = useState("light")
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+    // Load theme from localStorage on initial render
+    const savedTheme =
+      localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+
+    setTheme(savedTheme)
+    document.documentElement.classList.toggle("dark", savedTheme === "dark")
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light"
+    setTheme(newTheme)
+    localStorage.setItem("theme", newTheme)
+    document.documentElement.classList.toggle("dark", newTheme === "dark")
+  }
+
+  if (!isMounted) {
+    return <div className="w-10 h-10"></div> // Prevents hydration mismatch
+  }
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-100 transition-colors duration-200"
-      aria-label="Toggle theme"
+      className={`
+        relative w-10 h-10 rounded-full flex items-center justify-center
+        transition-colors duration-300
+        ${
+          theme === "dark"
+            ? "bg-blue-900/30 text-blue-400 hover:bg-blue-900/50"
+            : "bg-blue-100 text-blue-600 hover:bg-blue-200"
+        }
+      `}
+      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {theme === "light" ? <MoonIcon className="h-5 w-5" /> : <SunIcon className="h-5 w-5" />}
+      <span className="sr-only">{theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}</span>
+      <span className={`absolute transition-opacity duration-300 ${theme === "dark" ? "opacity-0" : "opacity-100"}`}>
+        <SunIcon className="h-5 w-5" />
+      </span>
+      <span className={`absolute transition-opacity duration-300 ${theme === "dark" ? "opacity-100" : "opacity-0"}`}>
+        <MoonIcon className="h-5 w-5" />
+      </span>
     </button>
-  )
-}
-
-function SunIcon({ className }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  )
-}
-
-function MoonIcon({ className }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
   )
 }
 
