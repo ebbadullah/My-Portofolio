@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ExternalLinkIcon, GithubIcon } from "./icons"
+import { ExternalLinkIcon, GithubIcon } from "./Icons"
 
 export default function Projects() {
   const [projects, setProjects] = useState([
