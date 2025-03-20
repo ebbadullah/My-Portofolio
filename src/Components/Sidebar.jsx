@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { HomeIcon, UserIcon, CodeIcon, MailIcon, MenuIcon, XIcon, DownloadIcon } from "./icons"
+import { HomeIcon, UserIcon, CodeIcon, MailIcon, MenuIcon, XIcon, DownloadIcon } from "./Icons"
 import { ThemeToggle } from "../Context/Theme-toggle"
 
 export default function Sidebar() {
