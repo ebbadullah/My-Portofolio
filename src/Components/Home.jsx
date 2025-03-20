@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { ArrowRightIcon } from "./Icons.jsx"
 
+// Dekho Bhai Mera Porfolio Bhtreen Bana Hai Mager Ye Mobile Per Bilkul Bhi Theek Nahi Chal Raha mALTB Responsivenis is Achi nai hai mobile per me chchta hun tum Mobile View Ke Alag  Components Banao Agher koi Browser per kholta ahi to jo abhi mere pas ahi wo show hoga agher mobile per khol raha  hai Mobile Components  Samje zara Modren Look Acha Lagay Ye Me Tummhe APNI pORTFOLIO KI FILE SENd karha hun inhe dekho or  in sab ke Mobile Ke ALag alag componetns vbanao bhtreen  walay 
 export default function Home() {
   const [text, setText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
