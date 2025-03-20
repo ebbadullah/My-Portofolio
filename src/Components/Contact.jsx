@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { MapPinIcon, MailIcon, PhoneIcon, SendIcon } from "./icons"
+import { MapPinIcon, MailIcon, PhoneIcon, SendIcon } from "./Icons"
 
 export default function Contact() {
   const [formData, setFormData] = useState({

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ArrowRightIcon } from "./icons"
+import { ArrowRightIcon } from "./Icons"
 
 export default function Home() {
   const [text, setText] = useState("")
