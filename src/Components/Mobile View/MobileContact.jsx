@@ -1,13 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { MapPinIcon, MailIcon, PhoneIcon, SendIcon } from "./Icons.jsx"
+import { MapPinIcon, MailIcon, PhoneIcon, SendIcon } from "../Icons"
 
-export default function Contact() {
+export default function MobileContact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   })
 
@@ -51,7 +50,6 @@ export default function Contact() {
     setFormData({
       name: "",
       email: "",
-      subject: "",
       message: "",
     })
     setIsSubmitting(false)
@@ -64,79 +62,62 @@ export default function Contact() {
   }
 
   return (
-    <div className="py-20 px-6 md:px-12 lg:px-24 relative">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
+    <div className="py-12 px-4 relative pb-20">
+      <div className="mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 relative inline-block">
           Get In Touch
-          <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
+          <span className="absolute -bottom-1 left-0 w-1/3 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm">
           Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="space-y-8">
           {/* Contact Form */}
           <div
-            className={`transition-all duration-700 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            className={`transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             {isSuccess && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-green-100 border border-green-400 text-green-700 px-3 py-2 rounded mb-4 flex items-center text-sm">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                     clipRule="evenodd"
                   />
                 </svg>
-                <span>Message sent successfully! I'll get back to you soon.</span>
+                <span>Message sent successfully!</span>
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Your Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                  />
-                </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  Your Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-sm"
+                />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Subject
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  Your Email
                 </label>
                 <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  value={formData.subject}
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-sm"
                 />
               </div>
 
@@ -147,17 +128,17 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  rows={6}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-sm"
                 />
               </div>
 
               <button
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white px-6 py-3 rounded-md font-medium flex items-center gap-2 transition-all duration-300 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white px-4 py-2.5 rounded-md text-sm font-medium flex items-center justify-center gap-2 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -196,54 +177,54 @@ export default function Contact() {
 
           {/* Contact Information */}
           <div
-            className={`bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-gray-800/50 rounded-lg p-8 shadow-lg transition-all duration-700 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+            className={`bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-gray-800/50 rounded-lg p-5 shadow-md transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Contact Information</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact Information</h3>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="flex items-start">
-                <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-800/50 p-3 rounded-full shadow-md">
-                  <MapPinIcon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-800/50 p-2 rounded-full shadow-sm">
+                  <MapPinIcon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 </div>
-                <div className="ml-4">
-                  <h4 className="text-sm font-medium text-gray-900 dark:text-white">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">Baloch Colony 95</p>
+                <div className="ml-3">
+                  <h4 className="text-xs font-medium text-gray-900 dark:text-white">Location</h4>
+                  <p className="text-gray-600 dark:text-gray-300 mt-0.5 text-sm">Baloch Colony 95</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-800/50 p-3 rounded-full shadow-md">
-                  <MailIcon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-800/50 p-2 rounded-full shadow-sm">
+                  <MailIcon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 </div>
-                <div className="ml-4">
-                  <h4 className="text-sm font-medium text-gray-900 dark:text-white">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">ebadbaloch345@gmail.com</p>
+                <div className="ml-3">
+                  <h4 className="text-xs font-medium text-gray-900 dark:text-white">Email</h4>
+                  <p className="text-gray-600 dark:text-gray-300 mt-0.5 text-sm">ebadbaloch345@gmail.com</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-800/50 p-3 rounded-full shadow-md">
-                  <PhoneIcon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-800/50 p-2 rounded-full shadow-sm">
+                  <PhoneIcon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 </div>
-                <div className="ml-4">
-                  <h4 className="text-sm font-medium text-gray-900 dark:text-white">Phone</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">+92 (316) 029-8672</p>
+                <div className="ml-3">
+                  <h4 className="text-xs font-medium text-gray-900 dark:text-white">Phone</h4>
+                  <p className="text-gray-600 dark:text-gray-300 mt-0.5 text-sm">+92 (316) 029-8672</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8">
-              <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+            <div className="mt-5">
+              <h4 className="text-xs font-medium text-gray-900 dark:text-white mb-3">Follow Me</h4>
+              <div className="flex space-x-3">
                 {/* Social Media Icons */}
                 <a
                   href="https://facebook.com/EBAD.BALOCH345"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 group"
                 >
                   <svg
-                    className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
+                    className="h-4 w-4 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -251,13 +232,13 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/itxebad1918/"
+                  href="https://www.instagram.com/roboth3art/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 group"
                 >
                   <svg
-                    className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
+                    className="h-4 w-4 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -268,10 +249,10 @@ export default function Contact() {
                   href="https://github.com/ebbadullah"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 group"
                 >
                   <svg
-                    className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
+                    className="h-4 w-4 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -282,10 +263,10 @@ export default function Contact() {
                   href="https://x.com/?lang=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                  className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 group"
                 >
                   <svg
-                    className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
+                    className="h-4 w-4 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -296,13 +277,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Background decoration */}
-      <div className="absolute -left-20 -bottom-20 -z-10 opacity-5 dark:opacity-5">
-        <svg width="300" height="300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="currentColor" className="text-blue-600 dark:text-blue-400" />
-        </svg>
       </div>
     </div>
   )

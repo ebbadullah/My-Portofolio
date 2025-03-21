@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { HomeIcon, UserIcon, CodeIcon, MailIcon } from "./Icons"
+import { HomeIcon, UserIcon, CodeIcon, MailIcon } from "./Icons.jsx"
 import { ThemeToggle } from "./theme-toggle"
 
 export default function NavBar() {
