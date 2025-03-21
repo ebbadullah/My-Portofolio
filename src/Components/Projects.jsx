@@ -33,7 +33,7 @@ export default function Projects() {
       description: "A modern portfolio website showcasing my skills and projects.",
       image: Data[2],
       tags: ["React", "Tailwind CSS", "Framer Motion"],
-      liveLink: "#",
+      liveLink: "https://fashivaa-collection.netlify.app/",
       githubLink: "#",
     },
   ])
