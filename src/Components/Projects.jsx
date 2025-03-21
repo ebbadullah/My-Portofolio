@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ExternalLinkIcon, GithubIcon } from "./icons"
+import { Data } from "../assets/Data/Data"
 
 export default function Projects() {
   const [projects, setProjects] = useState([
@@ -9,7 +10,7 @@ export default function Projects() {
       id: 1,
       title: "E-Commerce Website",
       description: "A fully responsive e-commerce platform built with React and Tailwind CSS.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: Data[0],
       tags: ["React", "Tailwind CSS", "Firebase"],
       liveLink: "https://royal-food-ibmo.vercel.app/",
       githubLink: "https://github.com/ebbadullah/royal-food",
@@ -19,7 +20,7 @@ export default function Projects() {
       id: 2,
       title: "Real Time Chat-App",
       description: "A real-time chat application built with React, Firebase, and Tailwind CSS",
-      image: "/placeholder.svg?height=300&width=500",
+      image: Data[1],
       tags: ["React", "Firebase", "Tailwind CSS"],
       liveLink: "https://quickchatzone.vercel.app/",
       githubLink: "https://github.com/ebbadullah/Chat-app",
@@ -27,9 +28,9 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Portfolio Website",
+      title: "Modren E-Commerce Website",
       description: "A modern portfolio website showcasing my skills and projects.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: Data[2],
       tags: ["React", "Tailwind CSS", "Framer Motion"],
       liveLink: "#",
       githubLink: "#",

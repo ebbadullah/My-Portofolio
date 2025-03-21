@@ -251,7 +251,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/roboth3art/"
+                  href="https://www.instagram.com/itxebad1918/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
