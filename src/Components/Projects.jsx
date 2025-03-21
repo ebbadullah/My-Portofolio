@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { ExternalLinkIcon, GithubIcon } from "./Icons"
 import { Data } from "../assets/Data/Data"
-import { ExternalLinkIcon, GithubIcon } from "./Icons.jsx"
 
 export default function Projects() {
   const [projects, setProjects] = useState([
