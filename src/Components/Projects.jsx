@@ -28,13 +28,15 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Modren E-Commerce Website",
-      description: "A modern portfolio website showcasing my skills and projects.",
+      title: " Brain Teaser Quiz ",
+      description: "A quiz application built with React, Tailwind CSS ",
       image: Data[2],
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
-      liveLink: "https://fashivaa-collection.netlify.app/",
+      tags: ["React", "Tailwind CSS" ],
+      liveLink: "https://brain-teaser-quiz.netlify.app/",
       githubLink: "#",
-    },
+      featured: true,
+
+    }
   ])
 
   const [activeFilter, setActiveFilter] = useState("all")
