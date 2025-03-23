@@ -92,7 +92,7 @@ export default function Sidebar() {
           <div className="p-6 text-center border-b border-gray-200 dark:border-gray-800">
             <div className="w-24 h-24 mx-auto rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden border-4 border-blue-100 dark:border-blue-900 shadow-md">
               <img
-                src="https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-6/456039248_1703929367060261_2775393133703123537_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFgolxL-fiD7W89cnGGYWLUo6vVrDZIaK6jq9WsNkhorj2Ja3s6MlMrSK8s3HqvwX9yCiqF_28Meq4rz096OoSy&_nc_ohc=68D71CEmq9wQ7kNvgFkA5DJ&_nc_oc=AdiCAFISOKfoATl5c1kK3C4IlfWtAHFipssqENUMfmjhkgfjfsQdjm7d0dc1dTHbs80&_nc_zt=23&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=itlj1uj0fEJxbARKNo5pFw&oh=00_AYFI2IfR5lo-8hZnmLPTU7xS9OwqPdvgj1Lzd4aoYgsgSQ&oe=67DF36E4"
+                src="https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-6/480695250_1841153403337856_331875294507991884_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGHKOJJW0Y3ZAVwG51WV6KIvtlOUu3IIHm-2U5S7cgged5hwTv1pqP3F9Z4AVD7lcD6bxluTRmsrgz1qJxRNDtG&_nc_ohc=bqfyR5wFYBAQ7kNvgFlSKH4&_nc_oc=Adm6hLlShRCy4H1gPS_n-eJzAIWhClbQcBySDLzjYJQuChNmCe-IbmL1U3CCxI_DixA&_nc_zt=23&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=x6oRfV0gnXD8Sp_-NY9GzQ&oh=00_AYE0HZ9zYbIrHEgBZovkgJsAOl_c5YUABG8_ryX7hIyzcw&oe=67E56AF6"
                 alt="EBAD ULLAH"
                 className="w-full h-full object-cover"
               />

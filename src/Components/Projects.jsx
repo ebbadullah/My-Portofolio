@@ -33,7 +33,40 @@ export default function Projects() {
       image: Data[2],
       tags: ["React", "Tailwind CSS" ],
       liveLink: "https://brain-teaser-quiz.netlify.app/",
-      githubLink: "#",
+      githubLink: "https://github.com/ebbadullah/Brain-Teaser-Quiz",
+      featured: true,
+
+    },
+    {
+      id: 4,
+      title: " Modern Memory Card Game ",
+      description: "A memory card game built with React, Tailwind CSS ",
+      image: Data[4],
+      tags: ["HTML", "CSS", "Javascript" ],
+      liveLink: "https://modren-memory-card-game.netlify.app/",
+      githubLink: "https://github.com/ebbadullah/Memory-Card-Game",
+      featured: true,
+
+    },
+    {
+      id: 5,
+      title: " Recipe Finder App ",
+      description: "A recipe finder application built with React, Tailwind CSS  ",
+      image: Data[5],
+      tags: ["HTML", "CSS", "Javascript" ],
+      liveLink: "https://modern-recipe-finder.netlify.app/",
+      githubLink: "https://github.com/ebbadullah/Recipe-Finder",
+      featured: true,
+
+    },
+    {
+      id: 6,
+      title: " Weather-App",
+      description: "A weather application built with React, Tailwind CSS ",
+      image: Data[3],
+      tags: ["HTML", "CSS", "Javascript" ],
+      liveLink: "https://modern-weather-a1.netlify.app/",
+      githubLink: "https://github.com/ebbadullah/Weather-App",
       featured: true,
 
     }
@@ -71,7 +104,7 @@ export default function Projects() {
     }
   }, [activeFilter, projects])
 
-  const filters = ["all", "React", "Tailwind CSS", "Firebase"]
+  const filters = ["all", "React", "Javascript", "HTML,CSS"]
 
   return (
     <div className="py-20 px-6 md:px-12 lg:px-24 relative">
