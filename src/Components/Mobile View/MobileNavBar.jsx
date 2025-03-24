@@ -123,7 +123,7 @@ export default function MobileNavBar() {
         </nav>
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-800">
           <button
-            className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-800 py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
+            className="w-full flex items-center mb-[125px] justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-800 py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
             onClick={() =>
               window.open(
                 "https://drive.google.com/file/d/17jTz5b-W54jxg4Wz5E5jLhdLrhOs3ztN/view?usp=drive_link",
