@@ -10,7 +10,7 @@ export default function Home() {
   const [loopNum, setLoopNum] = useState(0)
   const [typingSpeed, setTypingSpeed] = useState(150)
 
-  const phrases = ["Frontend Developer", "UI Enthusiast", "React Specialist"]
+  const phrases = ["Frontend Developer", "UI/UX Enthusiast", "React Specialist"]
 
   useEffect(() => {
     const handleTyping = () => {
