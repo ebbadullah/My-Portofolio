@@ -62,7 +62,9 @@ export default function NavBar() {
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`
-                    flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors
+                    flex items-center px-3 py-2 rounded-md text-sm
+                    
+                    font-medium transition-colors
                     ${
                       activeSection === item.id
                         ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
