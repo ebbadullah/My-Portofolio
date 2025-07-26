@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { HomeIcon, UserIcon, CodeIcon, MailIcon } from "./Icons.jsx"
 import { ThemeToggle } from "./theme-toggle"
@@ -7,7 +5,6 @@ import { ThemeToggle } from "./theme-toggle"
 export default function NavBar() {
   const [activeSection, setActiveSection] = useState("home")
 
-  // Track which section is currently in view
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "contact"]
@@ -15,6 +12,7 @@ export default function NavBar() {
 
       for (const section of sections) {
         const element = document.getElementById(section)
+        
         if (element) {
           const offsetTop = element.offsetTop
           const offsetBottom = offsetTop + element.offsetHeight
@@ -49,12 +47,10 @@ export default function NavBar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-800 ml-0 md:ml-64 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <span className="text-xl font-bold text-blue-600 dark:text-blue-400">EBAD ULLAH</span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex space-x-6">
               {menuItems.map((item) => (
@@ -77,6 +73,8 @@ export default function NavBar() {
                 </button>
               ))}
             </nav>
+
+            
 
             <ThemeToggle />
           </div>

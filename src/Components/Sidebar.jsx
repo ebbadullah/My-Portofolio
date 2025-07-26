@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { HomeIcon, UserIcon, CodeIcon, MailIcon, MenuIcon, XIcon, DownloadIcon } from "./Icons.jsx"
 import { ThemeToggle } from "../Context/Theme-toggle"
@@ -98,7 +96,7 @@ export default function Sidebar() {
               />
             </div>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">EBAD ULLAH</h1>
-            <p className="text-sm text-blue-600 dark:text-blue-400">Frontend Developer</p>
+            <p className="text-sm text-blue-600 dark:text-blue-400">MERN Stack Developer</p>
 
             {/* Theme toggle button */}
             <div className="mt-4 flex justify-center">

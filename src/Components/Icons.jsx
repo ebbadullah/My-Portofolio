@@ -1,6 +1,3 @@
-// This file contains all the icons used in the project
-// Using a custom icons file instead of a library to keep the project simple
-
 export function HomeIcon({ className }) {
   return (
     <svg

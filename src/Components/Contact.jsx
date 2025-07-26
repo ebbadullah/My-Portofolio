@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { MapPinIcon, MailIcon, PhoneIcon, SendIcon } from "./Icons.jsx"
 
