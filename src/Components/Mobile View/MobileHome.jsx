@@ -9,7 +9,7 @@ export default function MobileHome() {
   const [loopNum, setLoopNum] = useState(0)
   const [typingSpeed, setTypingSpeed] = useState(150)
 
-  const phrases = ["Frontend Developer", "UI Enthusiast", "React Specialist"]
+const phrases = ["MERN Stack Web Developer", "JavaScript Lover", "Building Scalable Apps"] 
 
   useEffect(() => {
     const handleTyping = () => {

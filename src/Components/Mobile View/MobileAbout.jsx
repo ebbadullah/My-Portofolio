@@ -25,8 +25,10 @@ export default function MobileAbout() {
         <div className="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-md p-5 mb-8">
           <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-center">
             I'm <span className="font-semibold text-blue-600 dark:text-blue-400">EBAD ULLAH</span>, a passionate
-            frontend developer with a keen eye for design and user experience. I specialize in creating responsive,
-            accessible, and performant web applications using modern technologies like React and Tailwind CSS.
+         I'm EBAD ULLAH, a passionate MERN Stack Developer with a keen eye for design and user experience. 
+I specialize in building full-stack, responsive, and performant web applications using modern 
+technologies like MongoDB, Express.js, React, Node.js, and Tailwind CSS.
+
           </p>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-center">
             With a strong foundation in web development fundamentals and a commitment to staying current with industry
