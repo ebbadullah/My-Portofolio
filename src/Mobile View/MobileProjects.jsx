@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { ExternalLinkIcon, GithubIcon } from "../Components/Icons"
-import { Data } from "../../assets/Data/Data"
+import { Data } from "../assets/Data/Data"
 
 export default function MobileProjects() {
     const [projects] = useState([
