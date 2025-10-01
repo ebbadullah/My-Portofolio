@@ -63,6 +63,26 @@ export default function Projects() {
             liveLink: "https://modern-weather-a1.netlify.app/",
             githubLink: "https://github.com/ebbadullah/Weather-App",
             featured: true,
+        },
+        {
+            id: 7,
+            title: "New Blogify App",
+            description: "A blog application built with MERN stack",
+            image: Data[7],
+            tags: ["React", "Tailwind CSS", "Express", "MongoDB"],
+            liveLink: "https://new-blogify-app.vercel.app/",
+            githubLink: "https://github.com/ebbadullah/Blogify-MERN",
+            featured: true,
+        },
+        {
+            id: 8,
+            title: "Techzone Learning Feedback App",
+            description: "A feedback application built with MERN stack",
+            image: Data[6],
+            tags: ["React", "Tailwind CSS", "Express", "MongoDB"],
+            liveLink: "https://techzone-learning-feedbackapp.netlify.app/",
+            githubLink: "https://github.com/ebbadullah/FeedbackApp",
+            featured: true,
         }
     ])
 
