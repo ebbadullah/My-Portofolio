@@ -29,7 +29,7 @@ export default function MobileHome() {
         <div className="flex flex-col justify-center min-h-screen px-5 pt-14 pb-20 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800">
             <div className="relative z-10 w-full max-w-md mx-auto">
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100 dark:border-blue-900 shadow-lg">
-                    <img src="https://res.cloudinary.com/dfnpekedc/image/upload/v1741934327/gteytlkmewgayj6lfn8x.jpg" alt="EBAD ULLAH" className="w-full h-full object-cover" />
+                    <img src="https://res.cloudinary.com/dfnpekedc/image/upload/v1759489336/Gemini_Generated_Image_1qa3cq1qa3cq1qa3_xbc5kn.png" alt="EBAD ULLAH" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="text-center mb-8">

@@ -63,6 +63,35 @@ export default function MobileProjects() {
             liveLink: "https://modern-weather-a1.netlify.app/",
             githubLink: "https://github.com/ebbadullah/Weather-App",
             featured: true,
+        },
+        {
+            id: 7,
+            title: "New Blogify App",
+            description: "A blog application built with MERN stack",
+            image: Data[7],
+            tags: ["React", "Tailwind CSS", "Express", "MongoDB"],
+            liveLink: "https://new-blogify-app.vercel.app/",
+            githubLink: "https://github.com/ebbadullah/Blogify-MERN",
+            featured: true,
+        },
+        {
+            id: 8,
+            title: "New Todo App Pro",
+            description: "A todo application built with React and Tailwind CSS",
+            image: Data[8],
+            tags: ["React", "Tailwind CSS"],
+            liveLink: "https://new-toodo-list.netlify.app/",
+            githubLink: "https://github.com/ebbadullah/React-TodoApp",
+            featured: true,
+        },{
+            id: 9,
+            title: "Techzone Learning Feedback App",
+            description: "A feedback application built with MERN stack",
+            image: Data[6],
+            tags: ["React", "Tailwind CSS", "Express", "MongoDB"],
+            liveLink: "https://techzone-learning-feedbackapp.netlify.app/",
+            githubLink: "https://github.com/ebbadullah/FeedbackApp",
+            featured: true,
         }
     ])
 
