@@ -63,7 +63,7 @@ export default function Sidebar() {
                 <div className="flex flex-col h-full">
                     <div className="p-6 text-center border-b border-gray-200 dark:border-gray-800">
                         <div className="w-24 h-24 mx-auto rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden border-4 border-blue-100 dark:border-blue-900 shadow-md">
-                            <img src="https://res-console.cloudinary.com/dfnpekedc/thumbnails/v1/image/upload/v1759489336/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV8xcWEzY3ExcWEzY3ExcWEzX3hiYzVrbg==/preview" alt="EBAD ULLAH" className="w-full h-full object-cover" />
+                            <img src="https://res.cloudinary.com/dfnpekedc/image/upload/v1759489336/Gemini_Generated_Image_1qa3cq1qa3cq1qa3_xbc5kn.png" alt="EBAD ULLAH" className="w-full h-full object-cover" />
                         </div>
                         <h1 className="text-xl font-bold text-gray-900 dark:text-white">EBAD ULLAH</h1>
                         <p className="text-sm text-blue-600 dark:text-blue-400">MERN Stack Developer</p>
