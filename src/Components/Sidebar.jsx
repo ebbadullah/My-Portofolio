@@ -63,7 +63,7 @@ export default function Sidebar() {
                 <div className="flex flex-col h-full">
                     <div className="p-6 text-center border-b border-gray-200 dark:border-gray-800">
                         <div className="w-24 h-24 mx-auto rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden border-4 border-blue-100 dark:border-blue-900 shadow-md">
-                            <img src="https://res.cloudinary.com/dfnpekedc/image/upload/v1741934327/gteytlkmewgayj6lfn8x.jpg" alt="EBAD ULLAH" className="w-full h-full object-cover" />
+                            <img src="https://res-console.cloudinary.com/dfnpekedc/thumbnails/v1/image/upload/v1759489336/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV8xcWEzY3ExcWEzY3ExcWEzX3hiYzVrbg==/preview" alt="EBAD ULLAH" className="w-full h-full object-cover" />
                         </div>
                         <h1 className="text-xl font-bold text-gray-900 dark:text-white">EBAD ULLAH</h1>
                         <p className="text-sm text-blue-600 dark:text-blue-400">MERN Stack Developer</p>
@@ -94,7 +94,7 @@ export default function Sidebar() {
                     <div className="p-4 border-t border-gray-200 dark:border-gray-800">
                         <button
                             className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-800 py-2 px-4 rounded-md font-medium transition-all duration-300 hover:shadow-lg"
-                            onClick={() => window.open("https://drive.google.com/file/d/17jTz5b-W54jxg4Wz5E5jLhdLrhOs3ztN/view?usp=drive_link", "_blank")}
+                            onClick={() => window.open("https://drive.google.com/file/d/1TtbV0x_4E-HVGzi7Fo5-6Ko3U44Sanox/view?usp=sharing", "_blank")}
                         >
                             <DownloadIcon className="h-4 w-4" />
                             Download CV

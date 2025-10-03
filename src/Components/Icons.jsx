@@ -1,9 +1,9 @@
 export function HomeIcon({ className }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+
+
+
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
@@ -18,16 +18,7 @@ export function HomeIcon({ className }) {
 
 export function UserIcon({ className }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} >
       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
       <circle cx="12" cy="7" r="4"></circle>
     </svg>
@@ -109,17 +100,25 @@ export function XIcon({ className }) {
 
 export function DownloadIcon({ className }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"   stroke="currentColor"  strokeWidth="2"
+     
+     
+    
+   
+    
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
     >
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+      <path d="M21 15v4a2 2
+      
+      
+      
+      
+      
+      
+      
+      0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
       <polyline points="7 10 12 15 17 10"></polyline>
       <line x1="12" y1="15" x2="12" y2="3"></line>
     </svg>
