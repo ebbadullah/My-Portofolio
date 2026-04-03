@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // Next.js configuration
-    reactStrictMode: true,
+  reactStrictMode: true,
+  output: 'export', // <-- enables static export for Cloudflare Pages
 };
 
 export default nextConfig;
