@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
+import VisitorTracker from '@/Components/VisitorTracker';
+import { ThemeProvider } from '@/Context/Theme-Provider';
 
 export const metadata: Metadata = {
   title: 'Full-Stack Web Developer',
@@ -31,7 +33,12 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          <VisitorTracker />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
