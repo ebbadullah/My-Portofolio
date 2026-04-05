@@ -213,22 +213,30 @@ export default function Projects() {
                                         isInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
                                     } transition-all duration-500`}
                                     style={{ transitionDelay: `${index * 100}ms` }}>
-                                        <div className="flex flex-col lg:flex-row min-h-[500px]">
-                                            <div className="lg:w-1/2 relative overflow-hidden group">
+                                        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px]">
+                                            <div className="relative w-full h-[350px] lg:h-full bg-gray-900 flex items-center justify-center overflow-hidden group">
+                                                {/* Blurred Background Layer to fill space */}
+                                                <img 
+                                                    src={(project.image as any)?.src || project.image || "/placeholder.svg"} 
+                                                    alt="" 
+                                                    className="absolute inset-0 w-full h-full object-cover blur-xl opacity-30 scale-110" 
+                                                />
+                                                
+                                                {/* Sharp Foreground Layer to show full image */}
                                                 <img 
                                                     src={(project.image as any)?.src || project.image || "/placeholder.svg"} 
                                                     alt={project.title} 
-                                                    className="w-full h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                                                    className="relative z-10 max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105" 
                                                 />
+
                                                 {project.featured && (
-                                                    <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                                                    <div className="absolute top-4 right-4 bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-30 border border-blue-400/30">
                                                         Featured
                                                     </div>
                                                 )}
-                                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                                             </div>
 
-                                            <div className="lg:w-1/2 p-8 flex flex-col justify-between">
+                                            <div className="p-6 md:p-8 flex flex-col justify-between bg-white dark:bg-gray-800">
                                                 <div>
                                                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{project.title}</h3>
                                                     <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{project.description}</p>
@@ -254,9 +262,6 @@ export default function Projects() {
                                                     >
                                                         <ExternalLinkIcon className="h-4 w-4" />
                                                         Live Demo       
-
-
-                                                        +
                                                     </a>
 
                                                     <a 

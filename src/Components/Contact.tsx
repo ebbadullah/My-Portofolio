@@ -16,23 +16,36 @@ export default function Contact() {
         return () => { if (element) observer.unobserve(element) }
     }, [])
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         const { name, value } = e.target
         setFormData((prev) => ({ ...prev, [name]: value }))
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault()
         setIsSubmitting(true)
-        await new Promise((resolve) => setTimeout(resolve, 1500))
-        setFormData({ name: "", email: "", subject: "", message: "" })
-        setIsSubmitting(false)
-        setIsSuccess(true)
-        setTimeout(() => setIsSuccess(false), 3000)
+        try {
+            const res = await fetch("/api/requests", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+            if (res.ok) {
+                setFormData({ name: "", email: "", subject: "", message: "" })
+                setIsSuccess(true)
+                setTimeout(() => setIsSuccess(false), 3000)
+            } else {
+                console.error("Failed to submit request")
+            }
+        } catch (error) {
+            console.error("Error submitting form", error)
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
-        <div className="py-20 px-6 md:px-12 lg:px-24 relative">
+        <div className="py-20 px-6 md:px-12 lg:px-24 relative" id="contact">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
                     Get In Touch

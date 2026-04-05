@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react"
 
 const ThemeContext = createContext<any>(null)
 
-export function ThemeProvider({ children }) {
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [theme, setTheme] = useState("light")
 
     useEffect(() => {
@@ -26,4 +26,3 @@ export function ThemeProvider({ children }) {
 }
 
 export const useTheme = () => useContext(ThemeContext)
-

@@ -8,12 +8,12 @@ import Projects from "@/Components/Projects";
 import Contact from "@/Components/Contact";
 import { ThemeToggle } from "@/Context/Theme-toggle";
 
-import MobileHome from "@/Mobile View/MobileHome";
-import MobileAbout from "@/Mobile View/MobileAbout";
-import MobileProjects from "@/Mobile View/MobileProjects";
-import MobileContact from "@/Mobile View/MobileContact";
-import MobileNavBar from "@/Mobile View/MobileNavBar";
-import useMobileDetection from "@/Mobile View/MobileDetection";
+import MobileHome from "@/MobileView/MobileHome";
+import MobileAbout from "@/MobileView/MobileAbout";
+import MobileProjects from "@/MobileView/MobileProjects";
+import MobileContact from "@/MobileView/MobileContact";
+import MobileNavBar from "@/MobileView/MobileNavBar";
+import useMobileDetection from "@/MobileView/MobileDetection";
 
 const MainLayout = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
