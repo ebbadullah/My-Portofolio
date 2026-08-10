@@ -44,7 +44,7 @@ export default function MobileHome() {
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow-lg mb-8 text-center">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">I create responsive, user-friendly web applications with modern technologies. Let's build something amazing together.</p>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">I am Ebad Ullah (Ebadullah Baloch), a Full-Stack MERN Web Developer crafting responsive, performant web applications with React, Next.js & Node.js.</p>
                 </div>
 
                 <div className="flex flex-col gap-3 w-full">

@@ -38,8 +38,8 @@ export default function Home() {
                     <span className="ml-1 w-1 h-8 bg-blue-600 dark:bg-blue-400 animate-pulse"></span>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-400 max-w-lg mb-8 text-lg leading-relaxed">
-                    I create responsive, user-friendly web applications with modern technologies. Let's build something amazing together.
+                <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-8 text-lg leading-relaxed">
+                    I am Ebad Ullah (Ebadullah Baloch), a Full-Stack MERN Web Developer specializing in building high-performance, responsive web applications with React, Next.js, Node.js, and MongoDB. Let's create something amazing together.
                 </p>
 
                 <div className="flex flex-wrap gap-4">

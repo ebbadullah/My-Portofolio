@@ -67,7 +67,7 @@ export default function Sidebar() {
                         <div className="w-24 h-24 mx-auto rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden border-4 border-blue-100 dark:border-blue-900 shadow-md">
                             <img src="https://res.cloudinary.com/dfnpekedc/image/upload/v1759489336/Gemini_Generated_Image_1qa3cq1qa3cq1qa3_xbc5kn.png" alt="EBAD ULLAH" className="w-full h-full object-cover" />
                         </div>
-                        <h1 className="text-xl font-bold text-gray-900 dark:text-white">EBAD ULLAH</h1>
+                        <span className="block text-xl font-bold text-gray-900 dark:text-white">EBAD ULLAH</span>
                         <p className="text-sm text-blue-600 dark:text-blue-400">MERN Stack Developer</p>
 
                         <div className="mt-4 flex justify-center">
