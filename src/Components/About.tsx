@@ -15,11 +15,40 @@ export default function About() {
     ])
 
     const [education] = useState([
-  { degree: "Matriculation", institution: "Sindh Board", year: "2023-2024", details: "Completed matriculation" },
-  { degree: "Intermediate (in progress)", institution: "Govt PECHS Education Foundation Science College, Karachi", year: "2025-2026", details: "Currently studying intermediate" },
-  { degree: "MERN Stack Course", institution: "Techzone Learning", year: "2024", details: "Practical MERN stack training" }
-]
-)
+        { degree: "Matriculation", institution: "Sindh Board", year: "2023-2024", details: "Completed matriculation" },
+        { degree: "Intermediate (in progress)", institution: "Govt PECHS Education Foundation Science College, Karachi", year: "2025-2026", details: "Currently studying intermediate" },
+        { degree: "MERN Stack Course", institution: "Techzone Learning", year: "2024", details: "Practical MERN stack training" },
+    ])
+
+    const [experience] = useState([
+        {
+            company: "Genimatics",
+            role: "Junior Software Developer",
+            type: "Full-time",
+            period: "Jan 2026 – Present",
+            duration: "8 mos",
+            location: "On-site",
+            current: true,
+        },
+        {
+            company: "Genimatics",
+            role: "Frontend Web Developer",
+            type: "Internship",
+            period: "Oct 2025 – Dec 2025",
+            duration: "3 mos",
+            location: "On-site",
+            current: false,
+        },
+        {
+            company: "Quickers Venture",
+            role: "Frontend Web Developer",
+            type: "Internship",
+            period: "May 2025 – Aug 2025",
+            duration: "4 mos",
+            location: "Karachi, Pakistan · On-site",
+            current: false,
+        },
+    ])
 
     const [activeTab, setActiveTab] = useState("skills")
 
@@ -60,8 +89,8 @@ export default function About() {
                         <div className="flex border-b border-gray-200 dark:border-gray-700 mb-6">
                             <button
                                 className={`py-2 px-4 font-medium text-sm transition-colors duration-200 ${
-                                    activeTab === "skills" 
-                                    ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400" 
+                                    activeTab === "skills"
+                                    ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400"
                                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
                                 }`}
                                 onClick={() => setActiveTab("skills")}
@@ -70,13 +99,23 @@ export default function About() {
                             </button>
                             <button
                                 className={`py-2 px-4 font-medium text-sm transition-colors duration-200 ${
-                                    activeTab === "education" 
-                                    ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400" 
+                                    activeTab === "education"
+                                    ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400"
                                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
                                 }`}
                                 onClick={() => setActiveTab("education")}
                             >
                                 Education
+                            </button>
+                            <button
+                                className={`py-2 px-4 font-medium text-sm transition-colors duration-200 ${
+                                    activeTab === "experience"
+                                    ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400"
+                                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                                }`}
+                                onClick={() => setActiveTab("experience")}
+                            >
+                                Experience
                             </button>
                         </div>
 
@@ -107,6 +146,19 @@ export default function About() {
                                         <p className="text-gray-600 dark:text-gray-400">{edu.institution}</p>
                                         <p className="text-sm text-gray-500 dark:text-gray-500 mb-1">{edu.year}</p>
                                         <p className="text-gray-600 dark:text-gray-300 text-sm">{edu.details}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {activeTab === "experience" && (
+                            <div className="space-y-6">
+                                {experience.map((exp, index) => (
+                                    <div key={index} className="border-l-4 border-blue-600 dark:border-blue-400 pl-4 py-1">
+                                        <h4 className="font-semibold text-gray-800 dark:text-gray-200">{exp.role}</h4>
+                                        <p className="text-gray-600 dark:text-gray-400">{exp.company} · {exp.type}</p>
+                                        <p className="text-sm text-gray-500 dark:text-gray-500 mb-1">{exp.period} · {exp.duration}</p>
+                                        <p className="text-gray-600 dark:text-gray-300 text-sm">{exp.location}</p>
                                     </div>
                                 ))}
                             </div>

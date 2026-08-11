@@ -1,7 +1,7 @@
 {
-  "/robots.txt/route": "/robots.txt",
   "/api/requests/route": "/api/requests",
   "/api/visitors/route": "/api/visitors",
+  "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
   "/_not-found/page": "/_not-found",
   "/page": "/",

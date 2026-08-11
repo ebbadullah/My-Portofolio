@@ -1,170 +1,102 @@
 "use client";
 
-import { useState, useEffect } from "react"
-import { ExternalLinkIcon, GithubIcon } from "@/Components/Icons"
-import { Data } from "@/Data"
+import { ExternalLinkIcon, GithubIcon } from "@/Components/Icons";
+import { projectsData, Project } from "@/data/projectsData";
 
 export default function MobileProjects() {
-    const [projects] = useState([
-        {
-            id: 1,
-            title: "E-Commerce Website",
-            description: "A fully responsive e-commerce platform built with React and Tailwind CSS.",
-            image: Data[0],
-            tags: ["React", "Tailwind CSS", "Firebase"],
-            liveLink: "https://royal-food-ibmo.vercel.app/",
-            githubLink: "https://github.com/ebbadullah/royal-food",
-            featured: true,
-        },
-        {
-            id: 2,
-            title: "Real Time Chat-App",
-            description: "A real-time chat application built with React, Firebase, and Tailwind CSS",
-            image: Data[1],
-            tags: ["React", "Firebase", "Tailwind CSS"],
-            liveLink: "https://quickchatzone.vercel.app/",
-            githubLink: "https://github.com/ebbadullah/Chat-app",
-            featured: true,
-        },
-        {
-            id: 3,
-            title: "Brain Teaser Quiz",
-            description: "A quiz application built with React, Tailwind CSS",
-            image: Data[2],
-            tags: ["React", "Tailwind CSS"],
-            liveLink: "https://brain-teaser-quiz.netlify.app/",
-            githubLink: "https://github.com/ebbadullah/Brain-Teaser-Quiz",
-            featured: true,
-        },
-        {
-            id: 4,
-            title: "Modern Memory Card Game",
-            description: "A memory card game built with React, Tailwind CSS",
-            image: Data[4],
-            tags: ["HTML", "CSS", "Javascript"],
-            liveLink: "https://modren-memory-card-game.netlify.app/",
-            githubLink: "https://github.com/ebbadullah/Memory-Card-Game",
-            featured: true,
-        },
-        {
-            id: 5,
-            title: "Recipe Finder App",
-            description: "A recipe finder application built with React, Tailwind CSS",
-            image: Data[5],
-            tags: ["HTML", "CSS", "Javascript"],
-            liveLink: "https://modern-recipe-finder.netlify.app/",
-            githubLink: "https://github.com/ebbadullah/Recipe-Finder",
-            featured: true,
-        },
-        {
-            id: 6,
-            title: "Weather-App",
-            description: "A weather application built with React, Tailwind CSS",
-            image: Data[3],
-            tags: ["HTML", "CSS", "Javascript"],
-            liveLink: "https://modern-weather-a1.netlify.app/",
-            githubLink: "https://github.com/ebbadullah/Weather-App",
-            featured: true,
-        },
-        {
-            id: 7,
-            title: "New Blogify App",
-            description: "A blog application built with MERN stack",
-            image: Data[7],
-            tags: ["React", "Tailwind CSS", "Express", "MongoDB"],
-            liveLink: "https://new-blogify-app.vercel.app/",
-            githubLink: "https://github.com/ebbadullah/Blogify-MERN",
-            featured: true,
-        },
-        {
-            id: 8,
-            title: "New Todo App Pro",
-            description: "A todo application built with React and Tailwind CSS",
-            image: Data[8],
-            tags: ["React", "Tailwind CSS"],
-            liveLink: "https://new-toodo-list.netlify.app/",
-            githubLink: "https://github.com/ebbadullah/React-TodoApp",
-            featured: true,
-        },{
-            id: 9,
-            title: "Techzone Learning Feedback App",
-            description: "A feedback application built with MERN stack",
-            image: Data[6],
-            tags: ["React", "Tailwind CSS", "Express", "MongoDB"],
-            liveLink: "https://techzone-learning-feedbackapp.netlify.app/",
-            githubLink: "https://github.com/ebbadullah/FeedbackApp",
-            featured: true,
-        }
-    ])
-
-    const [activeFilter, setActiveFilter] = useState("all")
-    const [filteredProjects, setFilteredProjects] = useState(projects)
-    const [isInView, setIsInView] = useState(false)
-    const filters = ["all", "React", "Tailwind CSS", "Firebase"]
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => setIsInView(entry.isIntersecting), { threshold: 0.1 })
-        const element = document.getElementById("projects")
-        if (element) observer.observe(element)
-        return () => { if (element) observer.unobserve(element) }
-    }, [])
-
-    useEffect(() => {
-        if (activeFilter === "all") {
-            setFilteredProjects(projects)
-        } else {
-            setFilteredProjects(projects.filter((project) => project.tags.includes(activeFilter)))
-        }
-    }, [activeFilter, projects])
-
     return (
-        <div className="py-12 px-4 relative">
+        <section className="py-12 px-4 relative bg-white dark:bg-gray-900" id="projects">
             <div className="mx-auto">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 relative inline-block">
-                    My Projects
-                    <span className="absolute -bottom-1 left-0 w-1/3 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
-                </h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm">
-                    Here are some of my recent projects. Each project represents my skills and experience in frontend development.
-                </p>
-
-                <div className="flex overflow-x-auto pb-2 mb-6 hide-scrollbar">
-                    <div className="flex gap-2 min-w-max">
-                        {filters.map((filter) => (
-                            <button key={filter} onClick={() => setActiveFilter(filter)} className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap ${activeFilter === filter ? "bg-blue-600 text-white dark:bg-blue-700" : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"}`}>
-                                {filter === "all" ? "All" : filter}
-                            </button>
-                        ))}
-                    </div>
+                {/* Heading matching other sections */}
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 relative inline-block">
+                        My Projects
+                        <span className="absolute -bottom-1 left-0 w-1/3 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-300 text-xs leading-relaxed">
+                        Explore my recent production projects, WebAR applications, e-commerce stores, and AI platforms.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-5">
-                    {filteredProjects.map((project, index) => (
-                        <div key={project.id} className={`bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md border border-gray-100 dark:border-gray-700 transition-all duration-500 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${index * 100}ms` }}>
-                            <div className="relative h-40 overflow-hidden">
-                                <img src={(project.image as any)?.src || project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
-                                {project.featured && <div className="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded">Featured</div>}
+                {/* Mobile Full Index View */}
+                <div className="space-y-8">
+                    {projectsData.map((project: Project) => (
+                        <div
+                            key={project.id}
+                            className="bg-gray-50/80 dark:bg-gray-800/50 p-5 rounded-3xl border border-gray-200/80 dark:border-gray-700/60 shadow-lg space-y-4 transition-all duration-500 ease-out hover:-translate-y-1 overflow-hidden"
+                        >
+                            <div className="bg-gray-950 rounded-2xl border border-gray-800 overflow-hidden shadow-xl group">
+                                <div className="bg-slate-900 px-3 py-1.5 border-b border-slate-800 flex items-center justify-between">
+                                    <div className="flex items-center gap-1">
+                                        <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                                        <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                        <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-slate-400 truncate max-w-[150px]">
+                                        {project.url.replace("https://", "").replace("www.", "")}
+                                    </span>
+                                </div>
+                                <div className="relative w-full aspect-[16/10] bg-gray-950 p-2 flex items-center justify-center overflow-hidden">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                        onError={(e) => {
+                                            const target = e.currentTarget;
+                                            target.style.display = "none";
+                                            if (target.parentElement) {
+                                                const fallback = document.createElement("div");
+                                                fallback.className = "w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 p-4 text-center";
+                                                fallback.innerHTML = `<span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Project #${project.id}</span><span class="text-xs font-bold text-white">${project.title}</span>`;
+                                                target.parentElement.appendChild(fallback);
+                                            }
+                                        }}
+                                    />
+                                </div>
                             </div>
 
-                            <div className="p-4">
-                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">{project.title}</h3>
-                                <p className="text-gray-600 dark:text-gray-300 mb-3 text-sm">{project.description}</p>
-
-                                <div className="flex flex-wrap gap-1.5 mb-4">
-                                    {project.tags.map((tag) => (
-                                        <span key={tag} className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs font-medium rounded-full">{tag}</span>
+                            <div>
+                                {project.subtitle && (
+                                    <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block mb-1">
+                                        {project.subtitle}
+                                    </span>
+                                )}
+                                <h3 className="text-lg font-extrabold text-gray-900 dark:text-white mb-2 leading-snug">
+                                    {project.title}
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300 text-xs leading-relaxed mb-4">
+                                    {project.description}
+                                </p>
+                                <div className="flex flex-wrap gap-1.5 mb-5">
+                                    {project.highlights.map((highlight, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="text-[10px] px-2.5 py-1 font-semibold bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-300 rounded-lg border border-gray-200 dark:border-gray-700"
+                                        >
+                                            {highlight}
+                                        </span>
                                     ))}
                                 </div>
 
-                                <div className="flex gap-2">
-                                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-800 px-2.5 py-1 rounded-md text-xs font-medium transition-colors flex-1 justify-center">
-                                        <ExternalLinkIcon className="h-3 w-3" />
-                                        Live Demo
+                                <div className="flex items-center gap-2">
+                                    <a
+                                        href={project.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-1.5 flex-1 px-4 py-2.5 rounded-xl text-xs font-bold bg-blue-600 text-white shadow-md active:scale-95 cursor-pointer"
+                                    >
+                                        <span>Live Demo</span>
+                                        <ExternalLinkIcon className="w-3.5 h-3.5" />
                                     </a>
 
-                                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 px-2.5 py-1 rounded-md text-xs font-medium transition-colors flex-1 justify-center">
-                                        <GithubIcon className="h-3 w-3" />
-                                        Code
+                                    <a
+                                        href={project.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-1.5 flex-1 px-4 py-2.5 rounded-xl text-xs font-bold bg-white dark:bg-gray-800 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 shadow-md active:scale-95 cursor-pointer"
+                                    >
+                                        <GithubIcon className="w-3.5 h-3.5 text-gray-700 dark:text-gray-300" />
+                                        <span>GitHub Code</span>
                                     </a>
                                 </div>
                             </div>
@@ -172,6 +104,6 @@ export default function MobileProjects() {
                     ))}
                 </div>
             </div>
-        </div>
-    )
+        </section>
+    );
 }

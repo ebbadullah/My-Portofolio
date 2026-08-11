@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: 'Ebad Ullah Portfolio',
     images: [
       {
-        url: 'https://res.cloudinary.com/dfnpekedc/image/upload/v1759489336/Gemini_Generated_Image_1qa3cq1qa3cq1qa3_xbc5kn.png',
+        url: '/profile.jpg',
         width: 800,
         height: 800,
         alt: 'Ebad Ullah - Full-Stack Web Developer',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description:
       'Official portfolio of Ebad Ullah — Full-Stack Web Developer specializing in React, Next.js, Node.js, Express & MongoDB.',
     images: [
-      'https://res.cloudinary.com/dfnpekedc/image/upload/v1759489336/Gemini_Generated_Image_1qa3cq1qa3cq1qa3_xbc5kn.png',
+      '/profile.jpg',
     ],
     creator: '@ebadull4h',
   },
@@ -96,8 +96,7 @@ export default function RootLayout({
     description:
       'Ebad Ullah is a Full-Stack MERN Web Developer specializing in React, Next.js, Node.js, Express, MongoDB, and modern web application development.',
     url: 'https://ebadbaloch.vercel.app',
-    image:
-      'https://res.cloudinary.com/dfnpekedc/image/upload/v1759489336/Gemini_Generated_Image_1qa3cq1qa3cq1qa3_xbc5kn.png',
+    image: '/profile.jpg',
     sameAs: [
       'https://www.linkedin.com/in/ebadull4h/',
       'https://github.com/ebbadullah',
