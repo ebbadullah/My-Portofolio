@@ -155,3 +155,72 @@ img.loaded {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* High-Visibility 360 Rotating Conic Border Glow for All Buttons */
+@keyframes borderConicRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-animated-border {
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-animated-border::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #60a5fa 90deg,
+    #00f2fe 180deg,
+    #2563eb 270deg,
+    transparent 360deg
+  );
+  z-index: -2;
+  animation: borderConicRotate 3s linear infinite;
+  opacity: 1;
+}
+
+.btn-animated-border::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.btn-animated-border:hover::before {
+  animation-duration: 1.5s;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.9));
+}
+
+/* Light/Theme Border Stage for Project Card Image */
+.card-thumbnail-border {
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dark .card-thumbnail-border {
+  border-color: rgba(55, 65, 81, 0.8);
+}
+
+.group:hover .card-thumbnail-border {
+  border-color: rgba(37, 99, 235, 0.7);
+}
+
+.dark .group:hover .card-thumbnail-border {
+  border-color: rgba(96, 165, 250, 0.7);
+}

@@ -15,6 +15,8 @@ import MobileContact from "@/MobileView/MobileContact";
 import MobileNavBar from "@/MobileView/MobileNavBar";
 import useMobileDetection from "@/MobileView/MobileDetection";
 
+import WhatsAppWidget from "@/Components/WhatsAppWidget";
+
 const MainLayout = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const isMobile = useMobileDetection();
@@ -63,11 +65,13 @@ const MainLayout = () => {
                         </p>
                     </footer>
 
+                    <WhatsAppWidget />
+
                     <button
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                        className={`fixed bottom-20 right-4 p-2 rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:bg-blue-700 ${scrollProgress > 20
+                        className={`fixed bottom-6 right-4 p-2.5 rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:bg-blue-700 z-40 ${scrollProgress > 20
                                 ? "opacity-100 translate-y-0"
-                                : "opacity-0 translate-y-10"
+                                : "opacity-0 translate-y-10 pointer-events-none"
                             }`}
                         aria-label="Scroll to top"
                     >
@@ -124,11 +128,13 @@ const MainLayout = () => {
                     </p>
                 </footer>
 
+                <WhatsAppWidget />
+
                 <button
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className={`fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:bg-blue-700 ${scrollProgress > 20
+                    className={`fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:bg-blue-700 z-40 ${scrollProgress > 20
                             ? "opacity-100 translate-y-0"
-                            : "opacity-0 translate-y-10"
+                            : "opacity-0 translate-y-10 pointer-events-none"
                         }`}
                     aria-label="Scroll to top"
                 >
