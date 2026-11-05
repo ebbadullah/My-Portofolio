@@ -22,7 +22,7 @@ export default function MobileAbout() {
 
                 <div className="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-md p-5 mb-8">
                     <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-center">
-                        I'm <span className="font-semibold text-blue-600 dark:text-blue-400">Ebad Ullah (Ebadullah Baloch)</span>, a passionate Full-Stack MERN Developer based in Karachi, Pakistan.
+                        I'm <span className="font-semibold text-blue-600 dark:text-blue-400">Ebad Ullah</span>, a passionate Junior Full-Stack Web Developer based in Karachi, Pakistan.
                         I specialize in building full-stack, responsive, and performant web applications using modern
                         technologies like React, Next.js, MongoDB, Express.js, Node.js, and Tailwind CSS.
                     </p>

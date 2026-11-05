@@ -8,7 +8,7 @@ export default function Home() {
     const [isDeleting, setIsDeleting] = useState(false)
     const [loopNum, setLoopNum] = useState(0)
     const [typingSpeed, setTypingSpeed] = useState(150)
-    const phrases = ["MERN Stack Developer", "JavaScript Lover", "Building Scalable Apps"]
+    const phrases = ["Junior Full-Stack Web Developer", "MERN Stack Developer", "JavaScript Lover", "Building Scalable Apps"]
 
     useEffect(() => {
         const handleTyping = () => {
@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-8 text-lg leading-relaxed">
-                    I am Ebad Ullah (Ebadullah Baloch), a Full-Stack MERN Web Developer specializing in building high-performance, responsive web applications with React, Next.js, Node.js, and MongoDB. Let's create something amazing together.
+                    I am Ebad Ullah, a Junior Full-Stack Web Developer specializing in building high-performance, responsive web applications with React, Next.js, Node.js, and MongoDB. Let's create something amazing together.
                 </p>
 
                 <div className="flex flex-wrap gap-4">

@@ -68,7 +68,7 @@ export default function Sidebar() {
                             <img src="/profile.jpg" alt="EBAD ULLAH" className="w-full h-full object-cover" />
                         </div>
                         <span className="block text-xl font-bold text-gray-900 dark:text-white">EBAD ULLAH</span>
-                        <p className="text-sm text-blue-600 dark:text-blue-400">MERN Stack Developer</p>
+                        <p className="text-sm text-blue-600 dark:text-blue-400">Junior Full-Stack Web Developer</p>
 
                         <div className="mt-4 flex justify-center">
                             <ThemeToggle />

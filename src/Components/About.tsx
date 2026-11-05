@@ -65,7 +65,7 @@ export default function About() {
                         
                         <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-4">Who I Am</h3>
                         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                            I'm Ebad Ullah (also known as Ebadullah Baloch), a passionate Full-Stack MERN Developer based in Karachi, Pakistan.
+                            I'm Ebad Ullah, a passionate Junior Full-Stack Web Developer based in Karachi, Pakistan.
                             I specialize in building full-stack, responsive, and performant web applications using modern
                             technologies like React, Next.js, MongoDB, Express.js, Node.js, and Tailwind CSS.
                         </p>

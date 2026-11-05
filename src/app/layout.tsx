@@ -7,20 +7,19 @@ import { ThemeProvider } from '@/Context/Theme-Provider';
 export const metadata: Metadata = {
   metadataBase: new URL('https://ebadbaloch.vercel.app'),
   title: {
-    default: 'Ebad Ullah (Ebadullah Baloch) | Full-Stack MERN Web Developer',
+    default: 'Ebad Ullah | Junior Full-Stack Web Developer',
     template: '%s | Ebad Ullah',
   },
   description:
-    'Official portfolio of Ebad Ullah (also known as Ebadullah Baloch), a passionate Senior Full-Stack MERN Web Developer specializing in React, Next.js, Node.js, Express, MongoDB, and modern web applications.',
+    'Official portfolio of Ebad Ullah, a passionate Junior Full-Stack Web Developer specializing in React, Next.js, Node.js, Express, MongoDB, and modern web applications.',
   keywords: [
     'Ebad Ullah',
-    'Ebadullah',
-    'Ebad Ullah Baloch',
-    'Ebadullah Baloch',
+    'Junior Full-Stack Web Developer',
     'Ebad Ullah developer',
     'Ebad Ullah web developer',
     'Ebad Ullah portfolio',
-    'Ebad Ullah MERN developer',
+    'Junior Web Developer',
+    'Junior Full Stack Developer',
     'MERN Stack Developer Karachi',
     'Full Stack Web Developer Pakistan',
     'React Next.js Developer',
@@ -51,24 +50,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ebadbaloch.vercel.app',
-    title: 'Ebad Ullah (Ebadullah Baloch) | Full-Stack MERN Web Developer',
+    title: 'Ebad Ullah | Junior Full-Stack Web Developer',
     description:
-      'Explore the official portfolio of Ebad Ullah — Full-Stack Web Developer specializing in React, Next.js, Node.js, Express & MongoDB.',
+      'Explore the official portfolio of Ebad Ullah — Junior Full-Stack Web Developer specializing in React, Next.js, Node.js, Express & MongoDB.',
     siteName: 'Ebad Ullah Portfolio',
     images: [
       {
         url: '/profile.jpg',
         width: 800,
         height: 800,
-        alt: 'Ebad Ullah - Full-Stack Web Developer',
+        alt: 'Ebad Ullah - Junior Full-Stack Web Developer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ebad Ullah | Full-Stack Web Developer',
+    title: 'Ebad Ullah | Junior Full-Stack Web Developer',
     description:
-      'Official portfolio of Ebad Ullah — Full-Stack Web Developer specializing in React, Next.js, Node.js, Express & MongoDB.',
+      'Official portfolio of Ebad Ullah — Junior Full-Stack Web Developer specializing in React, Next.js, Node.js, Express & MongoDB.',
     images: [
       '/profile.jpg',
     ],
@@ -89,14 +88,13 @@ export default function RootLayout({
     '@type': 'Person',
     '@id': 'https://ebadbaloch.vercel.app/#person',
     name: 'Ebad Ullah',
-    alternateName: ['Ebadullah', 'Ebad Ullah Baloch', 'Ebadullah Baloch'],
     givenName: 'Ebad',
     familyName: 'Ullah',
-    jobTitle: 'Full-Stack Web Developer',
+    jobTitle: 'Junior Full-Stack Web Developer',
     description:
-      'Ebad Ullah is a Full-Stack MERN Web Developer specializing in React, Next.js, Node.js, Express, MongoDB, and modern web application development.',
+      'Ebad Ullah is a Junior Full-Stack Web Developer specializing in React, Next.js, Node.js, Express, MongoDB, and modern web application development.',
     url: 'https://ebadbaloch.vercel.app',
-    image: '/profile.jpg',
+    image: 'https://ebadbaloch.vercel.app/profile.jpg',
     sameAs: [
       'https://www.linkedin.com/in/ebadull4h/',
       'https://github.com/ebbadullah',
@@ -140,7 +138,7 @@ export default function RootLayout({
     url: 'https://ebadbaloch.vercel.app',
     name: 'Ebad Ullah Portfolio',
     description:
-      'Official portfolio website of Ebad Ullah, Full-Stack MERN Web Developer.',
+      'Official portfolio website of Ebad Ullah, Junior Full-Stack Web Developer.',
     publisher: {
       '@id': 'https://ebadbaloch.vercel.app/#person',
     },

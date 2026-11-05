@@ -8,7 +8,7 @@ export default function MobileHome() {
     const [isDeleting, setIsDeleting] = useState(false)
     const [loopNum, setLoopNum] = useState(0)
     const [typingSpeed, setTypingSpeed] = useState(150)
-    const phrases = ["MERN Stack Web Developer", "JavaScript Lover", "Building Scalable Apps"]
+    const phrases = ["Junior Full-Stack Web Developer", "MERN Stack Web Developer", "JavaScript Lover", "Building Scalable Apps"]
 
     useEffect(() => {
         const handleTyping = () => {
@@ -44,7 +44,7 @@ export default function MobileHome() {
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow-lg mb-8 text-center">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">I am Ebad Ullah (Ebadullah Baloch), a Full-Stack MERN Web Developer crafting responsive, performant web applications with React, Next.js & Node.js.</p>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">I am Ebad Ullah, a Junior Full-Stack Web Developer crafting responsive, performant web applications with React, Next.js & Node.js.</p>
                 </div>
 
                 <div className="flex flex-col gap-3 w-full">
